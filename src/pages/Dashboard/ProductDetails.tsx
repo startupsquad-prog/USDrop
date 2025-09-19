@@ -61,6 +61,10 @@ const ProductDetails: React.FC = () => {
     return 0;
   };
 
+  if (!id) {
+    return <div className="p-6 text-center">Product ID not found</div>;
+  }
+
   if (!product) {
     return <div className="p-6 text-center">Loading...</div>;
   }
